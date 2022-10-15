@@ -48,7 +48,7 @@ class ItemList(MethodView):
     
     @blp.arguments(ItemSchema)
     @blp.response(201, ItemUpdateSchema)
-    def post(self,item_data):
+    def post(self,item_data): 
         for item in items.values():
             if(item_data["name"] == item["name"]
             and item_data["store_id"] == item["store_id"]):
